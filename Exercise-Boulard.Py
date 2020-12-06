@@ -185,7 +185,7 @@ def exercice_19():
 #(exercice_19())
 
 def exercice_20():
-    a="caractere-dune-chaine-en-python"
+    a="caractere-d'une-chaine-en-python"
     b=len(a)
     first=a[0]
     last= a[b-1]
@@ -240,8 +240,10 @@ def exercice_24():
 def exercice_25():
     mot=str(input("a chain of character:"))
     l=len(mot)
+    a=""
     for i in range (0,l):
-        print(mot[l-i-1])
+        a=a+mot[l-i-1]
+    print(a)
 #(exercice_25())
 
 def exercice_26():
@@ -253,11 +255,214 @@ def exercice_26():
 #(exercice_26())
 
 def exercice_27():
-    liste1=list(input("a chain of character:"))
+    liste1=input("a chain of character:")
+    liste =list(liste1.split(" "))
     somme= 0
-    for i in liste1:
-        somme= somme+i
+    for i in liste:
+        somme= somme + int(i)
     return somme
-print(exercice_27())
+#print(exercice_27())
+
+def exercice_27bis():
+    liste1=input("a chain of character:")
+    liste =list(liste1.split(" "))
+    somme= 1
+    for i in liste:
+        somme= somme * int(i)
+    return somme
+#print(exercice_27bis())
+
+def exercice_28():
+    liste1=input("a chain of character:")
+    liste =liste1.split(" ")
+    if liste==['']:
+        return('liste vide')
+    else:
+        return ('liste pleine',liste)
+#print(exercice_28())
+
+def exercice_29():
+    list1=input("a chain of character:")
+    list2=input("a chain of character:")
+    list12 =list1.split(" ")
+    list13 =list2.split(" ")
+    list3=[]
+    for i in (list12 + list13): 
+        if i not in list3: 
+            list3.append(i) 
+    return(list3 )
+#print(exercice_29())
+
+def exercice_30():
+    list1=input("a chain of character:")
+    list2=input("a chain of character:")
+    list12 =list1.split(" ")
+    list13 =list2.split(" ")
+    list3= 0
+    for i in list12 : 
+        if i in list13: 
+            list3= list3 +1
+    if list3 !=0:       
+        return('il y a',list3,'Caractere en commun' )
+    else:
+        return ()
+#print(exercice_30())
+
+def exercice_31():
+    list1=input("a chain of character:")
+    list12 =list1.split(" ")
+    list3=[]
+    list4=[]
+    for i in list12: 
+        if(int(i)%2 == 0): 
+            list3.append(i) 
+        else:
+            list4.append(i) 
+    return('liste des nombre impair',list4,'liste des nombre pair',list3)
+#print(exercice_31())
+
+def exercise_32():
+    from itertools import permutations
+    list1=input("a chain of character:")
+    list12 =list1.split(" ")
+    list12=list(permutations(list12))
+    return list12
+#print (exercise_32())
+
+def exercise_33():
+    s=input("a chain of character:")
+    return(s[0::2])
+#print (exercise_33())
+
+def exercice_34():
+    notes = [12 , 4 , 14 , 11 ,  18 , 13 ,  7, 10 , 5 , 9 , 15 , 8 , 14 , 16] 
+    list3=[]
+    list4=[]
+    for i in notes: 
+        if i>= 10: 
+            list3.append(i)
+        else:
+            list4.append(i) 
+    return(list4,list3)
+#print(exercice_34())
+
+def exercice_35():
+    import webbrowser 
+    url =input("a chain of character:")
+    webbrowser.open(url)
+    return(url)
+#print(exercice_35())
+
+def exercice_36():
+    sentence =input("a chain of character:")
+    t=" ".join(sentence.split()) 
+    return(t)
+#print(exercice_36())
+ 
+def exercice_37():
+    s1=(input("a chain of character:"))
+    s2=(input("a chain of character:"))
+    s4 =s1.split(" ")
+    s5 =s2.split(" ")
+    s3=[]
+    for i in s4 : 
+        if i in s5:
+            s3.append(i)
+    return(s3)
+#print(exercice_37())
+
+def exercice_38():
+    phrase=(input("a chain of character:"))
+    phrase1=phrase.split(" ")
+    phrase2=[]
+    for i in phrase1:
+        if len(i)> len(phrase2):
+            phrase2=i
+    return(phrase2)        
+#print(exercice_38())
+
+def exercice_39():
+    texte=(input("a chain of character:"))
+    texte1=texte.split(" ")
+    return len(texte1)       
+#print(exercice_39())
+
+def exercice_40():
+    texte=(input("a chain of character:"))
+    texte1=texte.split(" ")
+    texte_inverse= ""
+    save=texte1[0]
+    texte1[0]=texte1[len(texte1)-1]
+    texte1[len(texte1)-1]=save
+    for i in texte1:
+        texte_inverse = texte_inverse + i + ' '
+    return(texte_inverse)    
+#print(exercice_40())
+
+def exercice_41():
+    s=(input("liste of nomber please:"))
+    s1=s.split(" ")
+    n=int(input("nomber please:")) 
+    s3=[]
+    for i in s1:
+        if int(i)%n==0:
+            s3.append(i)
+    return(s3)
+#print(exercice_41())
+
+def exercice_42():
+    l=(input("liste of nomber please:"))
+    l1=l.split(" ")
+    print(l1)
+    x=(input("nomber please:")) 
+    l3=0
+    for i in l1:
+        if (i==x):
+            l3=l3+1
+    return(l3)
+#print(exercice_42())
+
+def exercice_43():
+    l=(input("Word please:"))
+    l1=l[0]
+    for i in l[1:]:
+        l1=l1+"*"+i
+    return(l1)
+#print(exercice_43())
+
+def exercice_45():
+    s=(input("Words please:"))
+    s2=0
+    s3=0
+    for i in s:
+        if i==i.upper():
+            s2=s2+1
+        else:
+            s3=s3+1
+    return('nombre de majuscules',s2,'nombre de minuscules',s3,)
+#print(exercice_45())
+
+def exercice_46():
+    user_number = int(input("Enter a number : "))
+    list_number = []
+    while user_number > 0:
+        number = user_number % 10
+        list_number.append(number)
+        user_number = user_number // 10
+    return (list_number[::-1])
+#print(exercice_46())
+
+def exercice_47():
+    s1=(input("a chain of character:"))
+    s2=(input("a chain of character:"))
+    s4 =s1.split(" ")
+    s5 =s2.split(" ")
+    s3=[]
+    for i in s4 : 
+        if i in s5:
+            s3.append(i)
+    return(s3)
+#print(exercice_47())
+
 
 
